@@ -114,3 +114,5 @@ alias cao="fuck"
 
 # 配置thefuck
 eval $(thefuck --alias)
+source ~/code/ros/catkin_ws/devel/setup.zsh
+source ~/code/ros/catkin_ws/devel/setup.zsh
