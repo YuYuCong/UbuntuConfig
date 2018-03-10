@@ -1,0 +1,11 @@
+selectp -t 0 # 选择第一个标签
+splitw -h -p 50 # 竖着分割成两半
+selectp -t 1 # 选择第二个标签
+splitw -v -p 40 #水平分割成两个
+selectp -t 2 # 选择第三个标签
+send-keys -t 2 'typora ./daily_record/2018.md' #向标签2输入typora
+#send-keys -t 2 'typora ./daily_record/2018.md' C-m #向标签2输入typora，并回车确定
+#selectp -t 0 # 返回第一个标签
+splitw -v -p 50 #分出第三个标签
+send-keys -t 3 'cd ~/Documents/ruijie' C-m
+send-keys -t 3 'sudo ./rjsupplicant.sh -u U201510828 -p 186374'

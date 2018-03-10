@@ -2,6 +2,6 @@
 !/.gitignore
 !/.zshrc
 !/.tmux.conf
-!/.tmux/dev
+!/.tmux
 !/.vimrc
 !/.vim/
