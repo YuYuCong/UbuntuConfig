@@ -1,10 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_cnt =3
 let g:netrw_dirhist_1='/home/will'
 let g:netrw_dirhist_2='/home/will/deja-dup'
 let g:netrw_dirhist_3='/home/will/.vim'
-let g:netrw_dirhist_4='/home/will/code/0.daily_code'
-let g:netrw_dirhist_5='/home/will/code/0.daily_code/2.helloslam'
-let g:netrw_dirhist_6='/home/will/code/0.daily_code'
-let g:netrw_dirhist_7='/home/will/code/0.daily_code/3.example_cmake'
-let g:netrw_dirhist_8='/home/will/code/0.daily_code'
