@@ -9,3 +9,4 @@ send-keys -t 2 'typora ./daily_record/2018.md' #向标签2输入typora
 splitw -v -p 50 #分出第三个标签
 send-keys -t 3 'cd ~/Documents/ruijie' C-m
 send-keys -t 3 'sudo ./rjsupplicant.sh -u U201510828 -p 186374' C-m
+send-keys -t 3 '123yc890'
