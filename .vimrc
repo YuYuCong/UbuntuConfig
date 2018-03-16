@@ -1,4 +1,4 @@
-"src:https://github.com/yangyangwithgnu/use_vim_as_ide/blob/master/.vimrc
+" src:https://github.com/yangyangwithgnu/use_vim_as_ide/blob/master/.vimrc
 
 " >>>>>>>
 " vim自身（非插件）快捷键
@@ -42,8 +42,9 @@ set wildmenu
 " <<<<<<<
 
 " >>>>>>>
-" 配色方案【！】此处需要安装配色方案
+" 配色方案需要安装
 set background=dark
+"colorscheme default
 "colorscheme solarized
 "colorscheme molokai
 "colorscheme phd
@@ -86,8 +87,11 @@ set ruler
 " 开启行号显示
 set number
 " 高亮显示当前行/列
-set cursorline
+set cursorline 
 set cursorcolumn
+hi CursorLine   cterm=NONE ctermbg=red ctermfg=white   
+hi CursorColumn cterm=NONE ctermbg=red ctermfg=white  
+"可选颜色 red（红），white（白），black（黑），green（绿），yellow（黄），blue（蓝），purple（紫），gray（灰），brown（棕），tan(褐色)，syan(青色)
 " 高亮显示搜索结果
 set hlsearch
 
@@ -96,18 +100,17 @@ set hlsearch
 " >>>>>>>
 " 其他美化
 
-" 设置 gvim 显示字体         【！】此处需要安装字体 yahei consolas hybrid 字体
+" 设置 gvim 显示字体    需要安装字体 yahei consolas hybrid 字体
 " 其中，由于字体名存在空格，需要用转义符“\”进行转义；最后的数字用于指定字体大小
 set guifont=YaHei\ Consolas\ Hybrid\ 10.5
 " 禁止折行
 set nowrap
-" 设置状态栏主题风格     【！】此处需要插件Powerline
+" 设置状态栏主题风格
 let g:Powerline_colorscheme='solarized256'
 " <<<<<<<
 
 " >>>>>>>
 " 语法分析
-
 " 开启语法高亮功能
 syntax enable
 " 允许用指定语法高亮配色方案替换默认方案
@@ -127,7 +130,7 @@ set tabstop=4
 set shiftwidth=4
 " 让 vim 把连续数量的空格视为一个制表符
 set softtabstop=4
-" 【！】此处需要安装缩进可视化插件 Indent Guides
+" 需要安装缩进可视化插件 Indent Guides
 " 随 vim 自启动
 let g:indent_guides_enable_on_vim_startup=1
 " 从第二层开始可视化显示缩进
@@ -148,3 +151,26 @@ set foldmethod=syntax   "基于语法
 " 启动 vim 时关闭折叠代码
 set nofoldenable
 " <<<<<<<
+
+
+
+" >>>>>>>以下为插件加载>>>>>>>
+" vundle 环境设置
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+" vundle 管理的插件列表必须位于 vundle#begin() 和 vundle#end() 之间
+call vundle#begin()
+"插件管理Vun
+Plugin 'VundleVim/Vundle.vim'
+"powerline插件【注意】似乎和tmux冲突，不能显示
+Plugin 'Lokaltog/vim-powerline'
+"cpp代码高亮
+Plugin 'octol/vim-cpp-enhanced-highlight'
+"cpp代码缩进显示【注意】这个插件可以用，但是进入vim时会报错，尚未解决！！！
+"Plugin 'nathanaelkane/vim-indent-guides'
+"代码自动补全
+Plugin 'Valloric/YouCompleteMe'
+
+" 插件列表结束
+call vundle#end()
+filetype plugin indent on
