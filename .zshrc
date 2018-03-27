@@ -114,5 +114,8 @@ alias cao="fuck"
 
 # 配置thefuck
 eval $(thefuck --alias)
+
+# 配置ros教学包
 source ~/code/ros/catkin_ws/devel/setup.zsh
-source ~/code/ros/catkin_ws/devel/setup.zsh
+# 配置Dashgo包
+source ~/code/ros/dashgo_ws/devel/setup.zsh
