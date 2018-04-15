@@ -119,3 +119,4 @@ eval $(thefuck --alias)
 source ~/code/ros/catkin_ws/devel/setup.zsh
 # 配置Dashgo包
 source ~/code/ros/dashgo_ws/devel/setup.zsh
+export ROS_PACKAGE_PATH=~/code/ros/myPkg_ws:/home/will/code/ros/dashgo_ws/src:/home/will/code/ros/catkin_ws/src:/opt/ros/kinetic/share
