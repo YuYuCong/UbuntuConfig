@@ -13,3 +13,5 @@ selectp -t 0          #返回第一个标签
 splitw -v -p 20       #水平分割20%
 send-keys -t 1 'sudo netease-cloud-music' C-m     #加载网易云音乐
 send-keys -t 1 '123yc890'
+splitw -h -p 50       #竖着分割成50%
+send-keys -t 2 'google-chrome'
