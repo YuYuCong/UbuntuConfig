@@ -120,3 +120,7 @@ source ~/code/ros/catkin_ws/devel/setup.zsh
 # 配置Dashgo包
 source ~/code/ros/dashgo_ws/devel/setup.zsh
 export ROS_PACKAGE_PATH=~/code/ros/myPkg_ws:/home/will/code/ros/dashgo_ws/src:/home/will/code/ros/catkin_ws/src:/opt/ros/kinetic/share
+# 配置爬虫脚本
+export PATH="/home/will/src/phantomjs-2.5.0-beta-ubuntu-xenial/bin/:$PATH"
+# 配置hokuyo激光雷达
+source /home/will/code/ros/hokuyo_ws/devel/setup.zsh
