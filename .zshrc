@@ -124,3 +124,5 @@ export ROS_PACKAGE_PATH=~/code/ros/myPkg_ws:/home/will/code/ros/dashgo_ws/src:/h
 export PATH="/home/will/src/phantomjs-2.5.0-beta-ubuntu-xenial/bin/:$PATH"
 # 配置hokuyo激光雷达
 source /home/will/code/ros/hokuyo_ws/devel/setup.zsh
+# 配置ORBslam_ROS
+export ROS_PACKAGE_PATH=${ROS_PACKAGE_PATH}:/home/will/code/ros/catkin_ws/src/ORB_SLAM2/Examples/ROS
