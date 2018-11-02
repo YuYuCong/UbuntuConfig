@@ -126,3 +126,6 @@ export PATH="/home/will/src/phantomjs-2.5.0-beta-ubuntu-xenial/bin/:$PATH"
 source /home/will/code/ros/hokuyo_ws/devel/setup.zsh
 # 配置ORBslam_ROS
 export ROS_PACKAGE_PATH=${ROS_PACKAGE_PATH}:/home/will/code/ros/catkin_ws/src/ORB_SLAM2/Examples/ROS
+# 配置tensorflow-gpu
+export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/cuda/lib64:/usr/local/cuda/extras/CUPTI/lib64"
+export CUDA_HOME=/usr/local/cuda
