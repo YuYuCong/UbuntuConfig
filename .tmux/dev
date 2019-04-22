@@ -1,17 +1,17 @@
 selectp -t 0          #选择第一个标签
 splitw -h -p 50       #竖着分割成50%
 selectp -t 1          #选择第二个标签
-splitw -v -p 40       #水平分割成40%
+splitw -v -p 30       #水平分割成30%
 selectp -t 2          #选择第三个标签
 send-keys -t 2 'cd ~/daily_record' C-m
-send-keys -t 2 'typora ./2018.md'                 #向标签2输入typora
+send-keys -t 2 'typora ./2019.md'                 #向标签2输入typora
 splitw -v -p 50       #分出第三个标签
 send-keys -t 3 'cd ~/Documents/ruijie' C-m
 send-keys -t 3 'sudo ./rjsupplicant.sh -u U201510828 -p 186374' C-m
 send-keys -t 3 '123yc890'
 selectp -t 0          #返回第一个标签
-splitw -v -p 20       #水平分割20%
-send-keys -t 1 'sudo netease-cloud-music' C-m     #加载网易云音乐
-send-keys -t 1 '123yc890'
+splitw -v -p 30       #水平分割30%
+send-keys -t 1 'jupyter notebook'
 splitw -h -p 50       #竖着分割成50%
-send-keys -t 2 'google-chrome'
+send-keys -t 2 'firefox'
+selectp -t 0

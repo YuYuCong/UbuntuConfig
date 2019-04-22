@@ -111,6 +111,9 @@ source /opt/ros/kinetic/setup.zsh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias cao="fuck"
+alias sudo='sudo env PATH=$PATH'
+alias sl="ls"
+alias LS="ls"
 
 # 配置thefuck
 eval $(thefuck --alias)
