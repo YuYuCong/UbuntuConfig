@@ -77,9 +77,7 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
-
-# 加载ros
-source /opt/ros/kinetic/setup.zsh 
+ 
 
 # User configuration
 
@@ -118,17 +116,38 @@ alias LS="ls"
 # 配置thefuck
 eval $(thefuck --alias)
 
-# 配置ros教学包
-source ~/code/ros/catkin_ws/devel/setup.zsh
+
+# 加载ros
+# ros中python2与python3的opencv冲突，使用Python3-opencv时加上注释，使用ros时去掉注释
+# source /opt/ros/kinetic/setup.zsh 
+# 配置ros工作空间
+# source ~/code/ros/catkin_ws/devel/setup.zsh
 # 配置Dashgo包
-source ~/code/ros/dashgo_ws/devel/setup.zsh
+# source ~/code/ros/dashgo_ws/devel/setup.zsh
 export ROS_PACKAGE_PATH=~/code/ros/myPkg_ws:/home/will/code/ros/dashgo_ws/src:/home/will/code/ros/catkin_ws/src:/opt/ros/kinetic/share
+
+
 # 配置爬虫脚本
 export PATH="/home/will/src/phantomjs-2.5.0-beta-ubuntu-xenial/bin/:$PATH"
 # 配置hokuyo激光雷达
-source /home/will/code/ros/hokuyo_ws/devel/setup.zsh
+# source /home/will/code/ros/hokuyo_ws/devel/setup.zsh
 # 配置ORBslam_ROS
 export ROS_PACKAGE_PATH=${ROS_PACKAGE_PATH}:/home/will/code/ros/catkin_ws/src/ORB_SLAM2/Examples/ROS
 # 配置tensorflow-gpu
 export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/cuda/lib64:/usr/local/cuda/extras/CUPTI/lib64"
 export CUDA_HOME=/usr/local/cuda
+# 配置RTAB-MAP
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/ros/kinetic/lib/x86_64-linux-gnu
+# 添加pythonpath
+# export PYTHONPATH="/usr/local/lib/python3.5/dist-packages:$PYTHONPATH"
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+if command -v pyenv 1>/dev/null 2>&1; then
+ eval "$(pyenv init -)"
+fi
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+if command -v pyenv 1>/dev/null 2>&1; then
+ eval "$(pyenv init -)"
+fi
+eval "$(pyenv virtualenv-init -)"
