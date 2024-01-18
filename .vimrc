@@ -106,6 +106,8 @@ Plugin 'sjl/gundo.vim'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'suan/vim-instant-markdown'
 Plugin 'lilydjwg/fcitx.vim'
+Plugin 'vim-syntastic/syntastic'
+let g:syntastic_cpp_checkers = ['gcc']
 
 " 插件列表结束
 call vundle#end()
