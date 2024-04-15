@@ -8,7 +8,8 @@ export ZSH=$HOME/.oh-my-zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="ys"
+ZSH_THEME="bira"
+# ZSH_THEME="ys"
 
 # 自己设定一个主题随机切换组
 # Set list of themes to load
@@ -124,30 +125,31 @@ eval $(thefuck --alias)
 # source ~/code/ros/catkin_ws/devel/setup.zsh
 # 配置Dashgo包
 # source ~/code/ros/dashgo_ws/devel/setup.zsh
-export ROS_PACKAGE_PATH=~/code/ros/myPkg_ws:/home/will/code/ros/dashgo_ws/src:/home/will/code/ros/catkin_ws/src:/opt/ros/kinetic/share
+# export ROS_PACKAGE_PATH=~/code/ros/myPkg_ws:/home/will/code/ros/dashgo_ws/src:/home/will/code/ros/catkin_ws/src:/opt/ros/kinetic/share
 
 
 # 配置爬虫脚本
-export PATH="/home/will/src/phantomjs-2.5.0-beta-ubuntu-xenial/bin/:$PATH"
+# export PATH="/home/will/src/phantomjs-2.5.0-beta-ubuntu-xenial/bin/:$PATH"
 # 配置hokuyo激光雷达
 # source /home/will/code/ros/hokuyo_ws/devel/setup.zsh
 # 配置ORBslam_ROS
-export ROS_PACKAGE_PATH=${ROS_PACKAGE_PATH}:/home/will/code/ros/catkin_ws/src/ORB_SLAM2/Examples/ROS
+# export ROS_PACKAGE_PATH=${ROS_PACKAGE_PATH}:/home/will/code/ros/catkin_ws/src/ORB_SLAM2/Examples/ROS
 # 配置tensorflow-gpu
-export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/cuda/lib64:/usr/local/cuda/extras/CUPTI/lib64"
-export CUDA_HOME=/usr/local/cuda
+# export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/cuda/lib64:/usr/local/cuda/extras/CUPTI/lib64"
+# export CUDA_HOME=/usr/local/cuda
 # 配置RTAB-MAP
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/ros/kinetic/lib/x86_64-linux-gnu
+# export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/ros/kinetic/lib/x86_64-linux-gnu
 # 添加pythonpath
 # export PYTHONPATH="/usr/local/lib/python3.5/dist-packages:$PYTHONPATH"
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-if command -v pyenv 1>/dev/null 2>&1; then
- eval "$(pyenv init -)"
-fi
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-if command -v pyenv 1>/dev/null 2>&1; then
- eval "$(pyenv init -)"
-fi
-eval "$(pyenv virtualenv-init -)"
+# export PYENV_ROOT="$HOME/.pyenv"
+# export PATH="$PYENV_ROOT/bin:$PATH"
+# if command -v pyenv 1>/dev/null 2>&1; then
+#  eval "$(pyenv init -)"
+# fi
+# export PYENV_ROOT="$HOME/.pyenv"
+# export PATH="$PYENV_ROOT/bin:$PATH"
+# if command -v pyenv 1>/dev/null 2>&1; then
+#  eval "$(pyenv init -)"
+# fi
+# eval "$(pyenv virtualenv-init -)"
+#
