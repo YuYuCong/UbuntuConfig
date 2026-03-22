@@ -12,20 +12,23 @@ vim.g.bigfile_size = 1024 * 1024 * 1 -- 1 MB
 
 vim.g.lazyvim_picker = "fzf"
 
--- 系统剪贴板设置
+-- 系统剪贴板：unnamedplus 使 y/p 与 + 寄存器（系统剪贴板）同步
 opt.clipboard = "unnamedplus"
-vim.g.clipboard = {
-  name = "xclip",
-  copy = {
-    ["+"] = "xclip -selection clipboard -i",
-    ["*"] = "xclip -selection primary -i",
-  },
-  paste = {
-    ["+"] = "xclip -selection clipboard -o",
-    ["*"] = "xclip -selection primary -o",
-  },
-  cache_enabled = 1,
-}
+-- xclip 仅适用于 Linux/X11；在 macOS 上强制使用会导致 + 寄存器始终为空（Neovim 自带 pbcopy/pbpaste）
+if vim.fn.has("unix") == 1 and vim.fn.has("macunix") == 0 and vim.fn.executable("xclip") == 1 then
+  vim.g.clipboard = {
+    name = "xclip",
+    copy = {
+      ["+"] = "xclip -selection clipboard -i",
+      ["*"] = "xclip -selection primary -i",
+    },
+    paste = {
+      ["+"] = "xclip -selection clipboard -o",
+      ["*"] = "xclip -selection primary -o",
+    },
+    cache_enabled = 1,
+  }
+end
 
 --------------------------------------------------------------------
 if true then
