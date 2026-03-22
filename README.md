@@ -42,7 +42,17 @@ UbuntuConfig/
     └── keybindings-mac.json
 ```
 
+## VS Code demos
+
+**VSCode using Neovim**
+
+![VS Code using neovim](doc/vscode.gif)
+
 ## Tmux demos
+
+**Neovim in Tmux**
+
+![Neovim in Tmux](doc/tmux-neovim.png)
 
 **Add windows**
 
@@ -60,9 +70,6 @@ UbuntuConfig/
 
 ![Tmux: resize panes](doc/tmux-window-size.gif)
 
-**Neovim in Tmux**
-
-![Neovim in Tmux](doc/tmux-neovim.png)
 
 ---
 
