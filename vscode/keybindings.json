@@ -127,6 +127,10 @@
         "when": "terminalFocus && terminalProcessSupported && terminalTextSelected"
     },
     {
+        "key": "ctrl+shift+g",
+        "command": "workbench.view.scm"
+    },
+    {
         "key": "ctrl+l g",
         "command": "-extension.openInGitHub"
     },
