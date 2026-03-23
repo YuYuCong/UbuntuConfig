@@ -42,13 +42,15 @@ UbuntuConfig/
     └── keybindings-mac.json
 ```
 
-## VS Code demos
+## ✨ Demos
 
-**VSCode using Neovim**
+### VS Code demos
 
-![VS Code using neovim](doc/vscode.gif)
+**VS Code using Neovim**
 
-## Tmux demos
+![VS Code using Neovim](doc/vscode.gif)
+
+### Tmux demos
 
 **Neovim in Tmux**
 
@@ -70,10 +72,11 @@ UbuntuConfig/
 
 ![Tmux: resize panes](doc/tmux-window-size.gif)
 
-
 ---
 
 ## 🚀 Getting Started
+
+### 🧩 Quick start
 
 Clone the repository (or fork it and use your own remote):
 
@@ -86,39 +89,70 @@ Back up any existing files you are about to replace, then symlink or copy config
 
 ```bash
 # Tmux
-ln -sf "./tmux.conf" ~/.tmux.conf
+ln -sf "$(pwd)/tmux.conf" ~/.tmux.conf
 
 # Zsh
-ln -sf "./zshrc" ~/.zshrc
+ln -sf "$(pwd)/zshrc" ~/.zshrc
 
 # Vim
-ln -sf "./vimrc" ~/.vimrc
+ln -sf "$(pwd)/vimrc" ~/.vimrc
 
 # Neovim
-ln -sf "./nvim" ~/.config/nvim
+ln -sf "$(pwd)/nvim" ~/.config/nvim
 
-# VSCode
+# VS Code
 # Ubuntu
-ln -sf "./vscode/settings.json" ~/.config/Code/User/settings.json
-ln -sf "./vscode/keybindings.json" ~/.config/Code/User/keybindings.json
+ln -sf "$(pwd)/vscode/settings.json" ~/.config/Code/User/settings.json
+ln -sf "$(pwd)/vscode/keybindings.json" ~/.config/Code/User/keybindings.json
 # macOS
-ln -sf "./vscode/settings.json" ~/Library/Application\ Support/Code/User/settings.json
-ln -sf "./vscode/keybindings-mac.json" ~/Library/Application\ Support/Code/User/keybindings.json
+ln -sf "$(pwd)/vscode/settings.json" ~/Library/Application\ Support/Code/User/settings.json
+ln -sf "$(pwd)/vscode/keybindings-mac.json" ~/Library/Application\ Support/Code/User/keybindings.json
 ```
 
-Start Neovim and let LazyVim bootstrap plugins:
+### ⚙️ Full Settings
 
-```sh
+```shell
+# 安装zsh
+sudo apt-get install zsh
+# 安装oh-my-zsh
+git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+cd ~/.oh-my-zsh/tools
+./install.sh
+# 部署zsh配置文件
+cd <path-to-UbuntuConfig>
+ln -sf "$(pwd)/zshrc" ~/.zshrc
+
+# 安装tmux
+sudo apt-get install tmux
+# 部署tmux配置文件
+ln -sf "$(pwd)/tmux.conf" ~/.tmux.conf
+# 设置默认启动tmux
+cat /etc/shells
+chsh -s /usr/bin/tmux
+
+# Vim
+sudo apt-get install vim
+# 部署Vim配置文件
+ln -sf "$(pwd)/vimrc" ~/.vimrc
+
+# Neovim
+sudo apt-get install neovim
+# 部署Neovim配置文件
+ln -sf "$(pwd)/nvim" ~/.config/nvim
+# 启动nvim初始化
 nvim
 ```
 
-Refer to comments in each file and to [LazyVim docs](https://lazyvim.github.io) for customization.
-
-## ⚙️ Neovim
+**Neovim**
 
 This repo’s Neovim setup follows LazyVim conventions: add or override plugin specs under `nvim/lua/plugins/`, and editor options under `nvim/lua/config/`. Full documentation lives at [lazyvim.github.io](https://lazyvim.github.io).
 
-## 🧩 VS Code
+- 配置文件位置`~/.config/nvim/`
+- 插件目录`~/.local/share/nvim/`
+- 缓存目录`~/.cache/nvim/`
+
+
+**VS Code**
 
 - **Linux-oriented** shortcuts live in `vscode/keybindings.json` (`ctrl` / `alt`).
 - On **macOS**, generate a mac-friendly file:
