@@ -64,10 +64,12 @@
     "workbench.colorTheme": "Tokyo Storm AltSynt",
     "redhat.telemetry.enabled": false,
     "vscode-neovim.neovimExecutablePaths.linux": "/opt/nvim-linux64/bin/nvim",
+    "vscode-neovim.neovimExecutablePaths.darwin": "/opt/homebrew/bin/nvim",
+    "vscode-neovim.neovimExecutablePaths.win32": "C:\\tools\\neovim\\nvim-win64\\bin\\nvim.exe",
     "window.customTitleBarVisibility": "windowed",
     "zenMode.hideLineNumbers": false,
     "zenMode.hideStatusBar": false,
-    "clangd.path": "~/.config/Cursor/User/globalStorage/llvm-vs-code-extensions.vscode-clangd/install/19.1.2/clangd_19.1.2/bin/clangd",
+    "clangd.path": "/Users/yucong/Library/Application Support/Code/User/globalStorage/llvm-vs-code-extensions.vscode-clangd/install/21.1.8/clangd_21.1.8/bin/clangd",
     "clangd.arguments": [
         "--header-insertion=never",
         "--completion-style=detailed",

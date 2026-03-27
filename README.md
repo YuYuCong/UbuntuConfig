@@ -18,6 +18,8 @@ Neovim is configured on top of [LazyVim](https://github.com/LazyVim/LazyVim), po
 - **Zsh, [Oh My Zsh](https://ohmyz.sh/)** — if you use the bundled `zshrc`
 - **Tmux**
 - **Neovim** — LazyVim expects Neovim **≥ 0.11.2** (built with **LuaJIT**); see [LazyVim requirements](https://lazyvim.github.io/installation)
+- **[fzf](https://github.com/junegunn/fzf)** — fuzzy finder, sourced in `zshrc` via `~/.fzf.zsh`
+- **[thefuck](https://github.com/nvbn/thefuck)** — command corrector, aliased as `fuck` / `cao` in `zshrc`
 
 ## 📂 File structure
 
@@ -141,6 +143,21 @@ sudo apt-get install neovim
 ln -sf "$(pwd)/nvim" ~/.config/nvim
 # 启动nvim初始化
 nvim
+
+# fzf（模糊搜索工具）
+# Ubuntu
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+# macOS
+brew install fzf
+$(brew --prefix)/opt/fzf/install
+
+# thefuck（命令纠错工具）
+# Ubuntu
+sudo apt-get install python3-dev python3-pip python3-setuptools
+pip3 install thefuck
+# macOS
+brew install thefuck
 ```
 
 **Neovim**
