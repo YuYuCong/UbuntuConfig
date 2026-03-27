@@ -25,7 +25,7 @@
     "git.openRepositoryInParentFolders": "never",
     "workbench.iconTheme": "vscode-icons",
     "git.confirmSync": false,
-    "workbench.preferredHighContrastColorTheme": "Default Dark Modern",
+    "workbench.preferredHighContrastColorTheme": "Dark Modern",
     "cmake.pinnedCommands": [
         "workbench.action.tasks.configureTaskRunner",
         "workbench.action.tasks.runTask"
