@@ -131,6 +131,7 @@ ln -sf "$(pwd)/tmux.conf" ~/.tmux.conf
 # 设置默认启动tmux
 cat /etc/shells
 chsh -s /usr/bin/tmux
+# 重启系统生效
 
 # Vim
 sudo apt-get install vim
@@ -143,6 +144,14 @@ sudo apt-get install neovim
 ln -sf "$(pwd)/nvim" ~/.config/nvim
 # 启动nvim初始化
 nvim
+
+# VS Code
+# Ubuntu
+ln -sf "$(pwd)/vscode/settings.json" ~/.config/Code/User/settings.json
+ln -sf "$(pwd)/vscode/keybindings.json" ~/.config/Code/User/keybindings.json
+# macOS
+ln -sf "$(pwd)/vscode/settings.json" ~/Library/Application\ Support/Code/User/settings.json
+ln -sf "$(pwd)/vscode/keybindings-mac.json" ~/Library/Application\ Support/Code/User/keybindings.json
 
 # fzf（模糊搜索工具）
 # Ubuntu
