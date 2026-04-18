@@ -7,8 +7,8 @@ Neovim is configured on top of [LazyVim](https://github.com/LazyVim/LazyVim), po
 ## ✨ What’s included
 
 - 🐚 **Zsh** — [Oh My Zsh](https://ohmyz.sh/)–based `zshrc` (theme, plugins, PATH)
-- 🪟 **Tmux** — prefix, splits, history, and workflow tweaks in `tmux.conf` (see [demos below](#tmux-demos))
-- ✏️ **Vim** — classic `vimrc` + alternate `vimrc-better`
+- 🪟 **Tmux** — prefix, splits, history, and workflow tweaks in `tmux.conf`
+- ✏️ **Vim** — `vimrc`
 - 🚀 **Neovim** — LazyVim-style layout under `nvim/` (see [`nvim/README.md`](nvim/README.md))
 - 🧩 **VS Code / Cursor** — `settings.json` and `keybindings.json`, plus a small script for macOS keymaps
 
@@ -29,6 +29,7 @@ Configs load from their usual locations once symlinked; you do not need a custom
 UbuntuConfig/
 ├── LICENSE
 ├── README.md
+├── doc/                 # demo images
 ├── zshrc
 ├── tmux.conf
 ├── vimrc
@@ -50,29 +51,29 @@ UbuntuConfig/
 
 **VS Code using Neovim**
 
-![VS Code using Neovim](doc/vscode.gif)
+![VS Code using Neovim](https://raw.githubusercontent.com/YuYuCong/UbuntuConfig/main/doc/vscode.gif)
 
 ### Tmux demos
 
 **Neovim in Tmux**
 
-![Neovim in Tmux](doc/tmux-neovim.png)
+![Neovim in Tmux](https://raw.githubusercontent.com/YuYuCong/UbuntuConfig/main/doc/tmux-neovim.png)
 
 **Add windows**
 
-![Tmux: add windows](doc/tmux-add-windows.gif)
+![Tmux: add windows](https://raw.githubusercontent.com/YuYuCong/UbuntuConfig/main/doc/tmux-add-windows.gif)
 
 **Split panes**
 
-![Tmux: split panes](doc/tmux-split-windows.gif)
+![Tmux: split panes](https://raw.githubusercontent.com/YuYuCong/UbuntuConfig/main/doc/tmux-split-windows.gif)
 
 **Switch windows**
 
-![Tmux: switch windows](doc/tmux-switch-windows.gif)
+![Tmux: switch windows](https://raw.githubusercontent.com/YuYuCong/UbuntuConfig/main/doc/tmux-switch-windows.gif)
 
 **Resize panes**
 
-![Tmux: resize panes](doc/tmux-window-size.gif)
+![Tmux: resize panes](https://raw.githubusercontent.com/YuYuCong/UbuntuConfig/main/doc/tmux-window-size.gif)
 
 ---
 
@@ -80,38 +81,33 @@ UbuntuConfig/
 
 ### 🧩 Quick start
 
-Clone the repository (or fork it and use your own remote):
+Clone the repository:
+
+#### Branches
+
+| Branch                 | What you get                                                                                                                      |
+| ---------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| **`main`**             | Full repository, including the `doc/` folder (GIF/PNG demos for this README, on the order of tens of MiB).                        |
+| **`main-without-doc`** | Same configuration files as `main`, but **without** `doc/`. Use this for a smaller, faster clone when you only need the dotfiles. |
+
+#### Clone (fast, dotfiles only)
+
+Recommended on a new machine when you do not need local copies of the demo media:
 
 ```sh
-git clone <your-fork-or-repo-url>
+git clone --branch main-without-doc --single-branch --depth 1 https://github.com/YuYuCong/UbuntuConfig.git
+cd UbuntuConfig
+```
+#### Clone (full, including `doc/`)
+
+```sh
+git clone https://github.com/YuYuCong/UbuntuConfig.git
 cd UbuntuConfig
 ```
 
-Back up any existing files you are about to replace, then symlink or copy configs. Examples:
-
-```bash
-# Tmux
-ln -sf "$(pwd)/tmux.conf" ~/.tmux.conf
-
-# Zsh
-ln -sf "$(pwd)/zshrc" ~/.zshrc
-
-# Vim
-ln -sf "$(pwd)/vimrc" ~/.vimrc
-
-# Neovim
-ln -sf "$(pwd)/nvim" ~/.config/nvim
-
-# VS Code
-# Ubuntu
-ln -sf "$(pwd)/vscode/settings.json" ~/.config/Code/User/settings.json
-ln -sf "$(pwd)/vscode/keybindings.json" ~/.config/Code/User/keybindings.json
-# macOS
-ln -sf "$(pwd)/vscode/settings.json" ~/Library/Application\ Support/Code/User/settings.json
-ln -sf "$(pwd)/vscode/keybindings-mac.json" ~/Library/Application\ Support/Code/User/keybindings.json
-```
-
 ### ⚙️ Full Settings
+
+Back up any existing files you are about to replace, then symlink or copy configs. 
 
 ```shell
 # 安装zsh
